@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# @file         HLL_Vision_Members_Judge
+# @details      Used to judge vision members
+# @author       ZhaoQicheng
+# @vision       0.2.1
+
+:<<!
+JUST_HLL_VISION_MEMBERS:
+        WeiHao
+        Wangzihang
+        DengJiaying
+        ZhangMin
+        ZhaoQicheng(TFW)
+!
+
+echo "
+
+           ___   ___    ___   ________   ________               ___   ___    ___        ___
+          /  /  /  /   /  /  /  _____/  /__   __/              /  /  /  /   /  /       /  /
+         /  /  /  /   /  /  /  /____      /  /    _________   /  /__/  /   /  /       /  /
+        /  /  /  /   /  /  /____   /     /  /    /________/  /   __   /   /  /       /  /
+  _____/  /  /  /___/  /   ____/  /     /  /                /  /  /  /   /  /____   /  /____
+ /_______/  /_________/  /_______/     /__/                /__/  /__/   /_______/  /_______/
+
+"
+
+#使用一个字符数组记录HLL战队视觉组成员姓名全拼
+members=("weihao" "wangzihang" "zhaoqicheng" "dengjiaying" "zhangmin")
+echo ${member[@]}
+echo "此时航哥走了过来问你："
+
+echo "你想查视觉组的户口？输入[yes/no]"
+read key1
+if [ ${key1} == "yes" ]
+then
+        echo "王子航：你想查谁？说吧！"
+fi
+
+read name
+echo "你输入的是：${name}"
+
+if [ ${name} == ${members[0]} ] || [ ${name} == ${members[1]} ] || [ ${name} == ${members[2]} ] || [ ${name} == ${members[3]} ]
+then
+        echo "${name}是HLL战队视觉组成员"
+else
+        echo "${name}不是HLL战队视觉组成员"
+        echo "有内鬼终止交易！"
+fi
+
+echo "王子航：别让我再看到你！"
